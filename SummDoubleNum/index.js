@@ -1,8 +1,11 @@
 function sumTwoSmallestNumbers(numbers) {
-  numbers = numbers.sort(function (a, b) {
-    return a - b;
-  });
-  return numbers[0] + numbers[1];
-}
+  const positiveIntegers = numbers.filter((n) => Number.isInteger(n) && n > 0);
+  if (positiveIntegers.length < 2) {
+    console.log("Недостаточно положительных целых чисел");
+  } else {
+    const [min1, min2] = positiveIntegers.sort((a, b) => a - b);
 
-console.log(sumTwoSmallestNumbers([19, 5, 42, -2, 77]));
+    return min1 + min2;
+  }
+}
+console.log(sumTwoSmallestNumbers([77]));
