@@ -1,13 +1,11 @@
 function rgb(r, g, b) {
-  r = Math.max(0, Math.min(255, Math.round(r)));
-  g = Math.max(0, Math.min(255, Math.round(g)));
-  b = Math.max(0, Math.min(255, Math.round(b)));
+  return `${rgbToHex(r)}${rgbToHex(g)}${rgbToHex(b)}`.toUpperCase();
+}
 
-  const hexR = r.toString(16).padStart(2, "0");
-  const hexG = g.toString(16).padStart(2, "0");
-  const hexB = b.toString(16).padStart(2, "0");
-
-  return `${hexR}${hexG}${hexB}`.toUpperCase();
+function rgbToHex(k) {
+  return (k = Math.max(0, Math.min(255, Math.round(k)))
+    .toString(16)
+    .padStart(2, "0"));
 }
 
 console.log(rgbToHex(300, 255, 255));
