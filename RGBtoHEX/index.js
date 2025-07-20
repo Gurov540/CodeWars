@@ -8,4 +8,4 @@ function rgbToHex(k) {
     .padStart(2, "0"));
 }
 
-console.log(rgbToHex(300, 255, 255));
+console.log(rgb(300, 255, 255));
