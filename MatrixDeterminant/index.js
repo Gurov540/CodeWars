@@ -30,11 +30,11 @@ const matrix2x2 = [
   [2, 5],
   [3, 7],
 ];
-console.log(determinant(matrix2x2)); // 2*7 - 5*3 = -1
+console.log(determinant(matrix2x2));
 
 const matrix3x3 = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
 ];
-console.log(determinant(matrix3x3)); // 0 (матрица вырожденная)
+console.log(determinant(matrix3x3));
