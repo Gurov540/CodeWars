@@ -2,7 +2,7 @@ function solution(list) {
   let result = [];
   let start = list[0];
 
-  for (let i = 0; i <= list.length; i++) {
+  for (let i = 1; i <= list.length; i++) {
     let current = list[i];
     let previous = list[i - 1];
 
@@ -16,7 +16,10 @@ function solution(list) {
       } else {
         result.push(start);
       }
-      start = current;
+
+      if (current !== undefined) {
+        start = current;
+      }
     }
   }
 
